@@ -7,17 +7,16 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/basicauth"
 	"github.com/gofiber/fiber/v2/middleware/csrf"
 	"github.com/gofiber/fiber/v2/utils"
-	"github.com/livghit/go-htmx/pkg/templating"
-	"github.com/livghit/go-htmx/web/handlers"
 	"github.com/spf13/viper"
+	"github.com/stevevandermerwe/go-htmx/pkg/templating"
+	"github.com/stevevandermerwe/go-htmx/web/handlers"
 )
 
 type Env struct {
-	PORT    string `mapstructure:"PORT"`
-	APPNAME string `mapstructure:"APP_NAME"`
+	PORT     string `mapstructure:"PORT"`
+	APPNAME  string `mapstructure:"APP_NAME"`
 	DBENGINE string `mapstructure:"DB_ENGINE"`
-  DBNAME string `mapstructure:"DB_NAME"`
-
+	DBNAME   string `mapstructure:"DB_NAME"`
 }
 
 func LoadEnv(path string) (env Env, err error) {

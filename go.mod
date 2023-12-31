@@ -1,4 +1,4 @@
-module github.com/livghit/go-htmx
+module github.com/stevevandermerwe/go-htmx
 
 go 1.20
 

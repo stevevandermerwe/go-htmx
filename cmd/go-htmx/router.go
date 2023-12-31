@@ -2,14 +2,15 @@ package main
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/livghit/go-htmx/pkg/data/models"
-	"github.com/livghit/go-htmx/web/handlers"
+	"github.com/stevevandermerwe/go-htmx/pkg/data/models"
+	"github.com/stevevandermerwe/go-htmx/web/handlers"
 )
 
 func SetupWebRoutes(app *fiber.App) {
 	// Setting up the routes for the web
 	// this means inside here you map the url with an handler ex
 	app.Get("/", handlers.HomepageHandler)
+	app.Get("/user/", handlers.UserHandler)
 
 }
 

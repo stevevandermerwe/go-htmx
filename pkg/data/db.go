@@ -5,9 +5,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/livghit/go-htmx/pkg/config"
-	"github.com/livghit/go-htmx/pkg/data/models"
 	_ "github.com/mattn/go-sqlite3"
+	"github.com/stevevandermerwe/go-htmx/pkg/config"
+	"github.com/stevevandermerwe/go-htmx/pkg/data/models"
 )
 
 // database implementation

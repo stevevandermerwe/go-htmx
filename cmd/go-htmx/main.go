@@ -4,8 +4,8 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/livghit/go-htmx/pkg/config"
-	"github.com/livghit/go-htmx/pkg/data"
+	"github.com/stevevandermerwe/go-htmx/pkg/config"
+	"github.com/stevevandermerwe/go-htmx/pkg/data"
 )
 
 func main() {
@@ -27,9 +27,10 @@ func run(env config.Env) error {
 	//initiating the database and connecting to the engine set up inside the env file
 	database := data.InitDatabase()
 	database.Connect(env)
-  database.MakeMigration()
-  
+	database.MakeMigration()
+
 	//Here you can register own routes
+	SetupWebRoutes(app)
 	SetupApiRoutes(app)
 
 	return app.Listen(env.PORT)
